@@ -15,7 +15,15 @@
             {{ session('sucess') }}
         </p>
     @endif
-
-    {{ dd($alunos) }}    
+    
+    @forelse ($alunos as $aluno)
+        <strong>ID:</strong> {{ $aluno->id }}<br>
+        <strong>NOME:</strong> {{ $aluno->nome }}<br>
+        <strong>E-MAIL:</strong> {{ $aluno->email }}<br>
+        <strong>DATA DE NASCIMENTO:</strong>  {{ $aluno->data_nasc }}<br>
+        <strong>GENERO:</strong> {{ $aluno->genero }}<br><hr>
+    @empty
+        
+    @endforelse
 </body>
 </html>

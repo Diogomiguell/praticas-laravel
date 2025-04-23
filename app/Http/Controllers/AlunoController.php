@@ -11,6 +11,7 @@ class AlunoController extends Controller
 
     public function index() 
     {
+        //Pegar registros do DB
         $alunos = Aluno::orderByDesc('id')->get();
         
         //Carregar a VIEW

@@ -383,13 +383,14 @@ return [
             'url' => '#',
         ],
         [
-            'text' => 'warning',
-            'icon_color' => 'yellow',
+            'text' => 'home',
+            'icon_color' => 'cyan',
             'url' => '#',
+            'icon' => 'fas fa-home',
         ],
         [
             'text' => 'information',
-            'icon_color' => 'cyan',
+            'icon_color' => 'lime',
             'url' => '#',
         ],
     ],
