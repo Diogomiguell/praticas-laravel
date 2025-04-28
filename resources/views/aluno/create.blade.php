@@ -1,3 +1,5 @@
+@extends('layouts.app')
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,7 +8,7 @@
     <title>Diogo - Página de Cadastro</title>
 </head>
 <body>
-    <a href="{{ route('aluno.index') }}">Lista</a>
+    <a href="{{ route('aluno.lista') }}">Lista</a>
 
     <h1>Cadastrar Alunos</h1>
 

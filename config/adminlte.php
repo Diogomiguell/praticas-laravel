@@ -378,20 +378,22 @@ return [
         ],
         ['header' => 'labels'],
         [
-            'text' => 'important',
-            'icon_color' => 'red',
-            'url' => '#',
+            'text' => 'alunos',
+            'icon_color' => 'cyan',
+            'url' => 'lista',
+            'icon' => 'fas fa-users',
         ],
         [
             'text' => 'home',
             'icon_color' => 'cyan',
-            'url' => '#',
+            'url' => '/',
             'icon' => 'fas fa-home',
         ],
         [
-            'text' => 'information',
-            'icon_color' => 'lime',
-            'url' => '#',
+            'text' => 'cadastros',
+            'icon_color' => 'cyan',
+            'url' => 'create-aluno',
+            'icon' => 'far fa-file-alt'
         ],
     ],
 

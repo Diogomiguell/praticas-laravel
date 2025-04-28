@@ -8,14 +8,13 @@ use Illuminate\Http\Request;
 
 class AlunoController extends Controller
 {
-
-    public function index() 
+    public function lista() 
     {
         //Pegar registros do DB
         $alunos = Aluno::orderByDesc('id')->get();
         
         //Carregar a VIEW
-        return view('aluno.index', ['alunos' => $alunos]);
+        return view('aluno.lista', ['alunos' => $alunos]);
     }
 
     public function create() {
@@ -37,7 +36,7 @@ class AlunoController extends Controller
         ]);
 
         //Redirecionar a página
-        return redirect()->route('aluno.index')
+        return redirect()->route('aluno.lista')
                         ->with('sucess', 'Aluno cadastrado com sucesso');
     }
 }
