@@ -11,10 +11,13 @@ class AlunoController extends Controller
     public function lista() 
     {
         //Pegar registros do DB
-        $alunos = Aluno::orderByDesc('id')->get();
+        //$alunos = Aluno::orderByDesc('id')->get();
+        //$alunos = Aluno::all();
+        $alunos = Aluno::paginate(10);
         
         //Carregar a VIEW
-        return view('aluno.lista', ['alunos' => $alunos]);
+        //return view('aluno.lista', ['alunos' => $alunos]);
+        return view('aluno.lista', compact('alunos'));
     }
 
     public function create() {

@@ -36,22 +36,42 @@
                 <th>E-MAIL</th>
                 <th>DATA DE NASCIMENTO</th>
                 <th>GENERO</th>
+                <th>...</th>
               </tr>
             </thead>
             <tbody>
                     @forelse ($alunos as $aluno)
-                    <tr>     
-                        <td>{{ $aluno->id }}</td>
-                        <td>{{ $aluno->nome }}</td>
-                        <td>{{ $aluno->email }}</td>
-                        <td>{{ $aluno->data_nasc }}</td>
-                        <td>{{ $aluno->genero }}</td>
-                    </tr> 
-                    @empty
+                      <tr>     
+                          <td>{{ $aluno->id }}</td>
+                          <td>{{ $aluno->nome }}</td>
+                          <td>{{ $aluno->email }}</td>
+                          <td>{{ $aluno->data_nasc }}</td>
+                          <td>{{ $aluno->genero }}</td>
+                          <td>
+                            <a href="#" class="btn btn-primary">
+                              <i class="far fa-edit"></i>
+                            </a>
 
+                            <a href="#" class="btn btn-danger">
+                              <i class="far fa-trash-alt"></i>
+                            </a>
+                          </td>
+                      </tr> 
+                    @empty
+                      <tr>
+                        <td>
+                          Sem alunos cadastrados! <a href="">Clique aqui</a>, para adicionar alunos
+                        </td>
+                      </tr>
                     @endforelse
             </tbody>
           </table>
+          <div class="card-footer clearfix">
+            <ul class="pagination pagination-sm m-0 float-lg-right">
+            
+            </ul>
+            {{ $alunos->links() }}
+          </div>
         </div>
       </div>
     </div>
