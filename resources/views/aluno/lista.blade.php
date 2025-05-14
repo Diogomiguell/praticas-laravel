@@ -60,7 +60,7 @@
                     @empty
                       <tr>
                         <td>
-                          Sem alunos cadastrados! <a href="">Clique aqui</a>, para adicionar alunos
+                          Sem alunos cadastrados! <a href="{{ route('aluno.create') }}">Clique aqui</a>, para adicionar alunos
                         </td>
                       </tr>
                     @endforelse
